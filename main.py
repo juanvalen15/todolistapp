@@ -1,1 +1,2 @@
-print("Hello")
+print("Enter todo:")
+input()
