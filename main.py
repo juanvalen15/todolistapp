@@ -13,6 +13,8 @@ while True:
         case 'show':
             for list_index, item in enumerate(todos):
                 print(list_index, item)
+                row = f"{list_index}-{item}"
+                print(row)
         case 'edit':
             number = int(input("Number of the todo to edit: "))
             existing_todo = todos[number]
