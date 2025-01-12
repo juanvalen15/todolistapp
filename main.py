@@ -1,4 +1,4 @@
-user_prompt = "Type add, show, or exit:"
+user_prompt = "Type add, show, edit, or exit:"
 todo_prompt = "Enter a todo:"
 todos = []
 
@@ -13,6 +13,11 @@ while True:
         case 'show':
             for item in todos:
                 print(item)
+        case 'edit':
+            number = int(input("Number of the todo to edit: "))
+            existing_todo = todos[number]
+            new_todo = input(todo_prompt)
+            todos[number] = new_todo
         case 'exit':
             break
         case _:
