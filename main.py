@@ -11,8 +11,8 @@ while True:
             todo = input(todo_prompt)
             todos.append(todo)
         case 'show':
-            for item in todos:
-                print(item)
+            for list_index, item in enumerate(todos):
+                print(list_index, item)
         case 'edit':
             number = int(input("Number of the todo to edit: "))
             existing_todo = todos[number]
