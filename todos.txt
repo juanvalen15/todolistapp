@@ -1,0 +1,6 @@
+take
+call
+buy
+fix
+buy
+take

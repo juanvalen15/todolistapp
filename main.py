@@ -8,9 +8,21 @@ while True:
 
     match user_action:
         case 'add':
-            todo = input(todo_prompt)
+            todo = input(todo_prompt) + "\n"
+
+            file = open('todos.txt','r')
+            todos = file.readlines()
+            file.close()
+
             todos.append(todo)
+
+            file = open('todos.txt','w')
+            file.writelines(todos)
         case 'show':
+            file = open('todos.txt')
+            todos = file.readlines()
+            file.close()
+
             for list_index, item in enumerate(todos):
                 row = f"{list_index + 1}-{item}"
                 print(row)
