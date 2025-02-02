@@ -23,10 +23,8 @@ while True:
             todos = file.readlines()
             file.close()
 
-            # simplified expression equivalent to the for loop. List comprehension
-            new_todos = [item.strip('\n') for item in todos]
-
-            for list_index, item in enumerate(new_todos):
+            for list_index, item in enumerate(todos):
+                item = item.strip('\n')
                 row = f"{list_index + 1}-{item}"
                 print(row)
         case 'edit':
