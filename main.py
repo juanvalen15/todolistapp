@@ -23,13 +23,8 @@ while True:
             todos = file.readlines()
             file.close()
 
-            print(f"TODOs list before strip: {todos}")
-            new_todos = []
-            for item in todos:
-                new_item = item.strip('\n')
-                new_todos.append(new_item)
-
-            print(f"TODOs list after strip: {new_todos}")
+            # simplified expression equivalent to the for loop. List comprehension
+            new_todos = [item.strip('\n') for item in todos]
 
             for list_index, item in enumerate(new_todos):
                 row = f"{list_index + 1}-{item}"
