@@ -23,7 +23,15 @@ while True:
             todos = file.readlines()
             file.close()
 
-            for list_index, item in enumerate(todos):
+            print(f"TODOs list before strip: {todos}")
+            new_todos = []
+            for item in todos:
+                new_item = item.strip('\n')
+                new_todos.append(new_item)
+
+            print(f"TODOs list after strip: {new_todos}")
+
+            for list_index, item in enumerate(new_todos):
                 row = f"{list_index + 1}-{item}"
                 print(row)
         case 'edit':
