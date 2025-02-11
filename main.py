@@ -10,18 +10,17 @@ while True:
         case 'add':
             todo = input(todo_prompt) + "\n"
 
-            file = open('files/todos.txt', 'r')
-            todos = file.readlines()
-            file.close()
+            with open('files/todos.txt', 'r') as file:
+                todos = file.readlines()
 
             todos.append(todo)
 
-            file = open('files/todos.txt', 'w')
-            file.writelines(todos)
+            with open('files/todos.txt', 'w') as file:
+                file.writelines(todos)
+
         case 'show':
-            file = open('files/todos.txt')
-            todos = file.readlines()
-            file.close()
+            with open('files/todos.txt') as file:
+                todos = file.readlines()
 
             for list_index, item in enumerate(todos):
                 item = item.strip('\n')

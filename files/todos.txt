@@ -4,3 +4,5 @@ buy
 fix
 buy
 take
+print
+cook
