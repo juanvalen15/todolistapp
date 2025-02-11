@@ -1,8 +1,3 @@
-take
+clean
 call
 buy
-fix
-buy
-take
-print
-cook
