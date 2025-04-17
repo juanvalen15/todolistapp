@@ -1,3 +1,5 @@
 clean
 call
 buy
+play soccer
+new task
